@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+/* Global Styles */
+:root {
+  --primary-color: #dc3545;
+  --dark-color: #333333;
+  --light-color: #f4f4f4;
+  --white-color: #fff;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: rgb(21, 32, 43);
+  color: #333;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+  color: var(--white-color);
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+a:hover {
+  color: #666;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Utility classes */
+.container {
+  width: 50%;
+  height: 100%;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  margin: 0 auto;
+}
+
+.current {
+  color: rgb(129, 129, 255);
+}
+
+.btn-link {
+  padding: 0.75rem;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  transition: all 0.1s ease-in;
+}
+
+.btn-link:hover {
+  background: rgb(33, 50, 68);
+  color: rgb(129, 129, 255);
+}
+
+.btn {
+  padding: 0.6rem 4rem;
+  background: rgb(133, 133, 224);
+  color: #fff;
+  transition: background 0.2s ease-in;
+}
+
+.btn:hover {
+  background: rgb(106, 106, 179);
+  color: #fff;
+}
+
+.icon {
+  font-size: 2rem;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  transition: all 0.1s ease-in;
+  border-radius: 50%;
+}
+
+.icon:hover {
+  background: rgb(33, 50, 68);
+  color: #fff;
+}
+
+/* Section Header */
+.header {
+  width: 25%;
+  height: 100vh;
+}
+
+.menu {
+  margin: 1.5rem 0;
+}
+
+.menu-item {
+  margin-bottom: 1rem;
+}
+
+.menu-item a i {
+  margin-right: 1rem;
 }
