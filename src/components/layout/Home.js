@@ -1,20 +1,25 @@
 import React from 'react';
 import Navbar from './Navbar';
 import Post from './Post';
-import Lifecyle from './Lifecycle';
+import Posts from './Posts';
+import PropTypes from 'prop-types';
 
-const Main = () => {
+const Home = ({ addPost, posts }) => {
     return (
         <div>
             <div className="main">
                 <div className="main-container">
                     <Navbar />
-                    <Post />
-                    <Lifecyle />
+                    <Post addPost={addPost} />
+                    <Posts posts={posts} />
                 </div>
             </div>
         </div>
     )
 }
 
-export default Main;
+Home.propTypes = {
+    posts: PropTypes.object.isRequired
+}
+
+export default Home;
