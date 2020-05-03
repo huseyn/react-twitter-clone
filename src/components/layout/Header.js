@@ -12,7 +12,7 @@ const Header = ({ icon }) => {
                     <i className={icon}></i>
                 </Link>
                 <Menu />
-                <Link to="#" className="btn btn-link">Tweet</Link>
+                <Link to="#" class="btn btn-link btn-l">Tweet</Link>
             </div>
         </div>
     )
