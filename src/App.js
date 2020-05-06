@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/layout/Header';
 import Home from './components/pages/Home';
+import Trend from './components/layout/Trend';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -51,6 +52,7 @@ class App extends Component {
         <div className="App">
           <Header />
           <Home addPost={this.addPost} posts={posts} />
+          <Trend />
         </div>
       </Router>
     );
