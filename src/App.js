@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Header from './components/layout/Header';
 import Home from './components/pages/Home';
 import Trend from './components/layout/Trend';
+import Profile from './components/pages/Profile';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -51,7 +52,14 @@ class App extends Component {
       <Router>
         <div className="App">
           <Header />
-          <Home addPost={this.addPost} posts={posts} />
+          <Switch>
+            <Route exact path='/' render={props => (
+              <Fragment>
+                <Home addPost={this.addPost} posts={posts} />
+              </Fragment>
+            )} />
+            <Route exact path='/profile' component={Profile} />
+          </Switch>
           <Trend />
         </div>
       </Router>
