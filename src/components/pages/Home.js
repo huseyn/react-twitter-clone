@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from './Navbar';
-import Post from './Post';
-import Posts from './Posts';
+import Navbar from '../layout/Navbar';
+import Post from '../posts/Post';
+import Posts from '../posts/Posts';
 import PropTypes from 'prop-types';
 
 const Home = ({ addPost, posts }) => {

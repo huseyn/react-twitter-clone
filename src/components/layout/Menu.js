@@ -6,7 +6,7 @@ const Menu = () => {
         <Fragment>
             <ul className="menu">
                 <li className="menu-item">
-                    <Link to="#" className="btn-link current btn-m">
+                    <Link to="/" className="btn-link current btn-m">
                         <i className="fas fa-home"></i> Home
               </Link>
                 </li>
