@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PostItem from '../posts/PostItem';
+import PostContext from '../../context/post/postContext';
 
-const Posts = ({ posts }) => {
+const Posts = () => {
+
+    const postContext = useContext(PostContext);
+    const { posts } = postContext;
     return (
         <div className="lifecycle">
             <ul>
                 {posts.map(post => (
                     <li key={post.id}>
-                        <PostItem post={post} />
+                        <PostItem />
                     </li>
                 ))}
             </ul>
