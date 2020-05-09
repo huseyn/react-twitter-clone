@@ -11,7 +11,7 @@ const Posts = () => {
             <ul>
                 {posts.map(post => (
                     <li key={post.id}>
-                        <PostItem />
+                        <PostItem post={post} />
                     </li>
                 ))}
             </ul>

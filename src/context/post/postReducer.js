@@ -1,5 +1,5 @@
 import {
-    ADD_POST, GET_POST
+    ADD_POST
 } from '../types';
 
 export default (state, action) => {
@@ -9,11 +9,6 @@ export default (state, action) => {
                 ...state,
                 posts: [...state.posts, action.payload]
             };
-        case GET_POST:
-            return {
-                ...state,
-                posts: [...state.posts, action.payload]
-            }
         default:
             return state;
     }
