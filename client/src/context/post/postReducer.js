@@ -1,13 +1,22 @@
 import {
-    ADD_POST, POST_ERROR
+    GET_POSTS,
+    ADD_POST,
+    POST_ERROR
 } from '../types';
 
 export default (state, action) => {
     switch (action.type) {
+        case GET_POSTS:
+            return {
+                ...state,
+                posts: action.payload,
+                loading: false
+            }
         case ADD_POST:
             return {
                 ...state,
-                posts: [...state.posts, action.payload]
+                posts: [action.payload, ...state.posts],
+                loading: false
             };
         case POST_ERROR:
             return {

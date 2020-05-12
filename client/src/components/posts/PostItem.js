@@ -9,8 +9,8 @@ const PostItem = ({ post: { user, username, date, content, likeCount, replyCount
             </div>
             <div className="shared">
                 <div className="user-items">
-                    <Link to="">{user}</Link>
-                    <span>@{username}</span>
+                    <Link to="">Huseyn Mikayil</Link>
+                    <span>@huseyn</span>
                     <span>{date}</span>
                 </div>
                 <div className="text">
