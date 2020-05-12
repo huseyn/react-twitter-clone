@@ -1,7 +1,15 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import AuthContext from '../../context/auth/authContext';
 
 const Menu = () => {
+
+    const authContext = useContext(AuthContext);
+
+    const onLogout = () => {
+        authContext.logout();
+    }
+
     return (
         <Fragment>
             <ul className="menu">
@@ -46,7 +54,7 @@ const Menu = () => {
                     </Link>
                 </li>
                 <li className="menu-item">
-                    <Link to="#" className="btn-link btn-m"
+                    <Link onClick={onLogout} to="#" className="btn-link btn-m"
                     ><i class="fas fa-sign-out-alt"></i> Sign out
                     </Link>
                 </li>
