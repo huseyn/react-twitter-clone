@@ -55,7 +55,7 @@ const Menu = () => {
                 </li>
                 <li className="menu-item">
                     <Link onClick={onLogout} to="#" className="btn-link btn-m"
-                    ><i class="fas fa-sign-out-alt"></i> Sign out
+                    ><i className="fas fa-sign-out-alt"></i> Sign out
                     </Link>
                 </li>
             </ul>

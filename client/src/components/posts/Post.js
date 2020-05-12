@@ -7,17 +7,21 @@ const Post = () => {
 
     const postContext = useContext(PostContext);
 
-    const [text, setText] = useState('');
+
+    const [post, setPost] = useState({
+        content: '',
+        likeCount: 0,
+        replyCount: 0
+    });
+
+    const { content, likeCount, replyCount } = post;
+
+    const onChange = e => setPost({ ...post, [e.target.name]: e.target.value });
 
     const onSubmit = e => {
         e.preventDefault();
-        if (text) {
-            postContext.addPost(text);
-            setText('');
-        }
+        postContext.addPost(post);
     }
-
-    const onChange = (e) => setText(e.target.value);
 
     return (
         <div>
@@ -30,8 +34,8 @@ const Post = () => {
                         <form onSubmit={onSubmit}>
                             <input
                                 type="text"
-                                name="text"
-                                value={text}
+                                name="content"
+                                value={content}
                                 onChange={onChange}
                                 placeholder="What's happening?"
                             />

@@ -1,50 +1,47 @@
 import React, { useReducer } from 'react';
+import axios from 'axios';
 import PostContext from './postContext';
 import PostReducer from './postReducer';
 import {
-    ADD_POST
+    ADD_POST,
+    POST_ERROR
 } from '../types';
 
 const PostState = props => {
 
     const initialState = {
-        posts: [
-            {
-                id: Math.random(),
-                user: 'Mike Johnson',
-                username: 'mike',
-                date: '1 min',
-                content: 'Test test',
-                likeCount: 0,
-                replyCount: 0
-            }
-        ]
+        posts: [],
+        error: null
     };
 
     const [state, dispatch] = useReducer(PostReducer, initialState);
 
     // Add Post
-    const addPost = text => {
-        const post = {
-            id: Math.random(),
-            user: 'Mike Johnson',
-            username: 'mike',
-            date: '1 min',
-            content: text,
-            likeCount: 0,
-            replyCount: 0
+    const addPost = async post => {
+
+        const config = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
         }
 
-        dispatch({
-            type: ADD_POST,
-            payload: post
-        })
+        try {
+            const res = await axios.post('/api/posts', post, config);
+
+            dispatch({
+                type: ADD_POST,
+                payload: res.data
+            })
+        } catch (err) {
+            dispatch({ type: POST_ERROR, payload: err.response.msg })
+        }
     }
 
     return <PostContext.Provider
         value={{
             posts: state.posts,
-            addPost
+            error: state.error,
+            addPost,
         }}
     >
         {props.children}
