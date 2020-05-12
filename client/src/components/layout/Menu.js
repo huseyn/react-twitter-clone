@@ -8,42 +8,47 @@ const Menu = () => {
                 <li className="menu-item">
                     <Link to="/" className="btn-link current btn-m">
                         <i className="fas fa-home"></i> Home
-              </Link>
+                    </Link>
                 </li>
                 <li className="menu-item">
                     <Link to="#" className="btn-link btn-m">
                         <i className="fas fa-hashtag"></i> Explore
-              </Link>
+                    </Link>
                 </li>
                 <li className="menu-item">
                     <Link to="#" className="btn-link btn-m">
                         <i className="fas fa-bell"></i> Notifications
-              </Link>
+                    </Link>
                 </li>
                 <li className="menu-item">
                     <Link to="#" className="btn-link btn-m">
                         <i className="fas fa-envelope"></i> Messages
-              </Link>
+                    </Link>
                 </li>
                 <li className="menu-item">
                     <Link to="#" className="btn-link btn-m">
                         <i className="fas fa-bookmark"></i> Bookmarks
-              </Link>
+                    </Link>
                 </li>
                 <li className="menu-item">
                     <Link to="#" className="btn-link btn-m">
                         <i className="fas fa-list"></i> Lists
-              </Link>
+                    </Link>
                 </li>
                 <li className="menu-item">
                     <Link to="#" className="btn-link btn-m">
                         <i className="fas fa-user"></i> Profile
-              </Link>
+                    </Link>
                 </li>
                 <li className="menu-item">
                     <Link to="#" className="btn-link btn-m"
                     ><i className="fas fa-ellipsis-h circle"></i> More
-              </Link>
+                    </Link>
+                </li>
+                <li className="menu-item">
+                    <Link to="#" className="btn-link btn-m"
+                    ><i class="fas fa-sign-out-alt"></i> Sign out
+                    </Link>
                 </li>
             </ul>
         </Fragment>
