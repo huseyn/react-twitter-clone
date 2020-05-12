@@ -5,6 +5,7 @@ import Profile from './components/pages/Profile';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Alerts from './components/layout/Alerts';
+import PrivateRoute from './components/routing/PrivateRoute';
 
 import PostState from './context/post/PostState';
 import AuthState from './context/auth/AuthState';
@@ -27,8 +28,8 @@ const App = () => {
             <div className="App">
               <Alerts />
               <Switch>
-                <Route exact path='/' component={Home} />
-                <Route exact path='/profile' component={Profile} />
+                <PrivateRoute exact path='/' component={Home} />
+                <PrivateRoute exact path='/profile' component={Profile} />
                 <Route exact path='/register' component={Register} />
                 <Route exact path='/login' component={Login} />
               </Switch>
