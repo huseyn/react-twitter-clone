@@ -460,3 +460,57 @@ img {
 .trend .people .users .more a {
   color: rgb(80, 119, 161);
 }
+
+/* Registration & Login Page */
+.auth {
+  background: #fff;
+  width: 100%;
+  height: 100vh;
+}
+
+.auth .form {
+  width: 500px;
+  padding: 8% 0 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.auth .form i {
+  font-size: 3rem;
+  color: rgb(129, 129, 255);
+}
+
+.auth .form h2 {
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+.auth .form .form-group {
+  text-align: left;
+}
+
+.auth .form label {
+  color: rgb(141, 141, 221);
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  border-bottom: 2px solid gray;
+}
+
+.form input[type="submit"] {
+  font-size: 1.2rem;
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+}
